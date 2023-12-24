@@ -1,0 +1,279 @@
+/* Global styles */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333;
+	background-color: #f5f5f5;
+}
+
+ul li a {
+	color: #0077cc;
+	text-decoration: none;
+}
+ul li a:hover,
+ul li a.active {
+	color: #C1D0B5;
+	border: 2px solid transparent #000000;
+	border-radius: 20px px;
+	-webkit-border-radius: 20px px;
+	-moz-border-radius: 20px px;
+	-ms-border-radius: 20px px;
+	-o-border-radius: 20px px;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 0.45rem 0.45rem;
+	transition: 0.4s;
+
+}
+
+ul li a.active:hover {
+	color: #D6E8DB;
+
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+header {
+	background-color: #fff;
+	padding: 20px 0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+	font-size: 36px;
+	font-weight: bold;
+	margin: 0;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+nav a {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+main {
+	padding: 50px 0;
+}
+
+h2 {
+	font-size: 28px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.container form img{
+    height: 300px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 6px;
+    
+}
+.slider-wrapper {
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+.slider {
+	display: flex;
+	aspect-ratio: 16 / 9;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	border-radius: 0.5rem;
+	-ms-overflow-style: none;
+	/* Hide scrollbar IE and Edge */
+	scrollbar-width: none;
+	/* Hide scrollbar Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+.slider img {
+	flex: 1 0 100%;
+	scroll-snap-align: start;
+	object-fit: cover;
+
+}
+
+.slider img:hover {
+	transition: opacity ease-in-out 1s;
+	-webkit-transition: opacity ease-in-out 1s;
+	-moz-transition: opacity ease-in-out 1s;
+	-ms-transition: opacity ease-in-out 1s;
+	-o-transition: opacity ease-in-out 1s;
+}
+
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+.slider-nav a {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: rgb(255, 255, 255);
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+	-webkit-transition: opacity ease 250ms;
+	-moz-transition: opacity ease 250ms;
+	-ms-transition: opacity ease 250ms;
+	-o-transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+	opacity: 1;
+}
+
+.course-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.course-list li {
+	flex-basis: calc(33.33% - 20px);
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.course-list li:last-child {
+	margin-right: 0;
+}
+
+.course-list a {
+	display: block;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	text-align: center;
+}
+
+footer .container {
+	background-color: #f5f5f5;
+	margin: 1.5rem;
+	padding: 50px 0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	font-size: large;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+	font-style: italic;
+}
+
+
+/* Small screens (up to 600px) */
+@media (max-width: 600px) {
+	header {
+		padding: 10px 0;
+	}
+
+	header h1 {
+		font-size: 24px;
+	}
+
+	nav li {
+		margin-left: 10px;
+	}
+
+	nav a {
+		font-size: 16px;
+	}
+
+	main {
+		padding: 30px 0;
+	}
+
+	h2 {
+		font-size: 24px;
+	}
+
+	.slider-wrapper {
+		max-width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+
+	.slider {
+		aspect-ratio: auto;
+		overflow-x: scroll;
+	}
+
+	.slider-nav {
+		bottom: 0.75rem;
+	}
+
+	.course-list li {
+		flex-basis: 100%;
+		margin-right: 0;
+	}
+}
+
+/* Medium screens (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+	.container {
+		padding: 0 10px;
+	}
+
+	nav li {
+		margin-right: 15px;
+	}
+
+	main {
+		padding: 40px 0;
+	}
+
+	.slider-wrapper {
+		max-width: 80%;
+	}
+
+	.course-list li {
+		flex-basis: calc(50% - 20px);
+	}
+}
+
+/* Large screens (1025px and above) */
+@media (min-width: 1025px) {
+	.container {
+		padding: 0;
+	}
+
+	.course-list li {
+		flex-basis: calc(33.33% - 20px);
+	}
+}
